@@ -26,7 +26,7 @@ const createAboutWindow = () => {
     icon: `${__dirname}/assets/icons/Icon_256x256.png`,
     resizable: inDevMode,
     width: 300,
-    height: 200,
+    height: 300,
   });
 
   aboutWindow.loadFile('./app/about.html');
