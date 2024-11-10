@@ -4,11 +4,15 @@
   "description": "Application for resizing images",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "dev": "nodemon --exec electron ."
   },
   "author": "Edward Kim",
   "license": "MIT",
   "devDependencies": {
     "electron": "^33.2.0"
+  },
+  "dependencies": {
+    "nodemon": "^3.1.7"
   }
 }
