@@ -13,9 +13,14 @@ const createMainWindow = () => {
     title: 'ImageShrink',
     icon: `${__dirname}/assets/icons/Icon_256x256.png`,
     resizable: inDevMode,
-    width: 500,
+    width: inDevMode ? 800 : 500,
     height: 600,
+    webPreferences: { nodeIntegration: true, contextIsolation: false }
   });
+
+  if (inDevMode) {
+    mainWindow.webContents.openDevTools()
+  }
 
   mainWindow.loadFile('./app/index.html');
 };
